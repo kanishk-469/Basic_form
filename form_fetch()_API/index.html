@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Http</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <!--The <template> tag is used as a container to hold some HTML content hidden 
+      from the user when the page loads.
+
+      The content inside <template> can be rendered later with a JavaScript.
+
+      You can use the <template> tag if you have some HTML code you want to use over 
+      and over again, but not until you ask for it. To do this without the <template> tag, 
+      you have to create the HTML code with JavaScript to prevent the browser from rendering 
+      the code.-->
+    <template id="single-post">
+      <li class="post-item">
+        <h2></h2>
+        <p></p>
+        <button class="btn">DELETE</button>
+      </li>
+    </template>
+    <section id="new-post">
+      <form>
+        <div class="form-control">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title"/>
+        </div>
+        <div class="form-control">
+          <label for="content">Content</label>
+          <textarea rows="3" id="content" name="content"></textarea>
+        </div>
+        <div class="form-control">
+          <label for="file">File</label>
+          <input type="file" id="input-file" name="file" multiple/>
+        </div>
+        <button type="submit" id="form-btn">ADD</button>
+      </form>
+    </section>
+    <section id="available-posts">
+      <button>FETCH POSTS</button>
+      <ul class="posts"></ul>
+    </section>
+</body>
+</html>
